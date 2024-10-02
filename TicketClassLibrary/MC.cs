@@ -9,13 +9,22 @@ namespace TicketClassLibrary
     public class MC:Vehicle
     {
         /// <summary>
-        /// Returnerer en fast pris på MC.
+        /// Returnerer en fast pris på MC 125 kr.
         /// </summary>
         /// <returns>Prisen for MC, er 125.</returns>
         public override double Price()
         {
-            return 125;
+            double basePrice = 125;
+
+            // Giv 5% rabat, hvis Brobizz bruges
+            if (HasBrobizz)
+            {
+                basePrice *= 0.95; // 5% rabat
+            }
+
+            return basePrice;
         }
+
 
         /// <summary>
         /// Returnerer MC køretøjstype.
@@ -26,5 +35,6 @@ namespace TicketClassLibrary
         {
             return "MC";
         }
+
     }
 }

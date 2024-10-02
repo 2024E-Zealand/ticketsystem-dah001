@@ -1,16 +1,25 @@
 ﻿namespace TicketClassLibrary
 {
-    public class Car:Vehicle
+    public class Car : Vehicle
     {
-        
+
         /// <summary>
         /// Returnerer en fast pris på bilen.
         /// </summary>
         /// <returns>Prisen for bilen, er 240.</returns>
         public override double Price()
         {
-            return 240;
+            double basePrice = 240;
+
+            // Giv 5% rabat, hvis Brobizz bruges
+            if (HasBrobizz)
+            {
+                basePrice *= 0.95; // 5% rabat
+            }
+
+            return basePrice;
         }
+
 
         /// <summary>
         /// Returnerer bilens køretøjstype.
@@ -21,5 +30,6 @@
         {
             return "Car";
         }
+
     }
 }
