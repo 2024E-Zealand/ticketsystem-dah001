@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TicketClassLibrary</name>
+    </assembly>
+    <members>
+        <member name="M:TicketClassLibrary.Car.Price">
+            <summary>
+            Returnerer en fast pris på bilen.
+            </summary>
+            <returns>Prisen for bilen, er 240.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.Car.VehicleType">
+            <summary>
+            Returnerer bilens køretøjstype.
+            </summary>
+            <param name="car">En bil-instans, som repræsenterer køretøjet.</param>
+            <returns>En streng, der angiver køretøjstypen som "Car".</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.Price">
+            <summary>
+            Returnerer en fast pris på MC 125 kr.
+            </summary>
+            <returns>Prisen for MC, er 125.</returns>
+        </member>
+        <member name="M:TicketClassLibrary.MC.VehicleType">
+            <summary>
+            Returnerer MC køretøjstype.
+            </summary>
+            <param name="MC">En MC-instans, som repræsenterer køretøjet.</param>
+            <returns>En streng, der angiver køretøjstypen som "MC".</returns>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Licenseplate">
+            <summary>
+            Repræsenterer nummerpladen for bilen, som´ikke kan være længere end 7 tegn.
+            </summary>
+        </member>
+        <member name="P:TicketClassLibrary.Vehicle.Date">
+            <summary>
+            Repræsenterer datoen for bilen, fx registreringsdato.
+            </summary>
+        </member>
+        <member name="M:TicketClassLibrary.Vehicle.Price">
+            <summary>
+            Abstrakte metoder som skal implementeres i de afledte klasser
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

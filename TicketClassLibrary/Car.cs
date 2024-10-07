@@ -6,18 +6,29 @@
         /// <summary>
         /// Returnerer en fast pris på bilen.
         /// </summary>
-        /// <returns>Prisen for bilen, er 240.</returns>
+        /// <returns>Prisen for bilen, er 240, uden brobizz, med brobizz får man yderligere 5%.</returns>
+       
         public override double Price()
         {
-            double basePrice = 240;
+            return 240;
+        }
 
-            // Giv 5% rabat, hvis Brobizz bruges
-            if (HasBrobizz)
+        public double WeekendDiscount()
+        {
+            var price = Price();
+
+            if (Date.DayOfWeek == DayOfWeek.Saturday || Date.DayOfWeek == DayOfWeek.Sunday)
+
             {
-                basePrice *= 0.95; // 5% rabat
+                price *= 0.80;
             }
 
-            return basePrice;
+            if (HasBrobizz)
+            {
+                price *= 0.95;
+            }
+
+            return price;
         }
 
 
